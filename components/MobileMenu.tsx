@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -17,9 +17,43 @@ interface MobileMenuProps {
 export default function MobileMenu({ isOpen, onClose, onOpenQuote }: MobileMenuProps) {
   const pathname = usePathname();
   const [servicesExpanded, setServicesExpanded] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const isClosingRef = useRef(false);
 
+  // Smooth Enter and Exit Orchestration
   useEffect(() => {
     if (isOpen) {
+      isClosingRef.current = false;
+      setIsMounted(true);
+      // Double requestAnimationFrame ensures the initial offscreen state is painted before animating in
+      const raf = requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setIsAnimating(true);
+        });
+      });
+      return () => cancelAnimationFrame(raf);
+    } else {
+      setIsAnimating(false);
+      const timer = setTimeout(() => {
+        setIsMounted(false);
+      }, 350);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
+
+  const handleClose = useCallback(() => {
+    if (isClosingRef.current) return;
+    isClosingRef.current = true;
+    setIsAnimating(false);
+    setTimeout(() => {
+      onClose();
+    }, 320);
+  }, [onClose]);
+
+  // Lock body scroll while mounted
+  useEffect(() => {
+    if (isMounted) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -27,47 +61,53 @@ export default function MobileMenu({ isOpen, onClose, onOpenQuote }: MobileMenuP
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [isOpen]);
+  }, [isMounted]);
 
-  const prevPathname = React.useRef(pathname);
+  const prevPathname = useRef(pathname);
 
-  // Close only when route actually changes
+  // Close smoothly only when route actually changes
   useEffect(() => {
     if (prevPathname.current !== pathname) {
       prevPathname.current = pathname;
-      onClose();
+      handleClose();
     }
-  }, [pathname, onClose]);
+  }, [pathname, handleClose]);
 
   // Handle escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        onClose();
+        handleClose();
       }
     };
-    if (isOpen) {
+    if (isMounted) {
       window.addEventListener("keydown", handleKeyDown);
     }
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, onClose]);
+  }, [isMounted, handleClose]);
 
-  if (!isOpen) return null;
+  if (!isMounted) return null;
 
   return (
-    <div className="fixed inset-0 z-50 lg:hidden">
-      {/* Backdrop with elegant blur */}
+    <div className="fixed inset-0 z-50 lg:hidden overflow-hidden">
+      {/* Backdrop with smooth fade in and fade out */}
       <div
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
-        onClick={onClose}
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          isAnimating ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={handleClose}
         aria-hidden="true"
       />
 
-      {/* Slide-in Drawer with luxury rounded left edge */}
-      <div className="fixed inset-y-0 right-0 w-[88vw] max-w-[380px] bg-white shadow-2xl flex flex-col z-10 overflow-hidden rounded-l-[28px] border-l border-[#EAE3DF] transform transition-transform duration-300 ease-out">
+      {/* Slide-in Drawer with smooth slide in and slide out */}
+      <div
+        className={`fixed inset-y-0 right-0 w-[88vw] max-w-[380px] bg-white shadow-2xl flex flex-col z-10 overflow-hidden rounded-l-[28px] border-l border-[#EAE3DF] transform transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform ${
+          isAnimating ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         {/* Drawer Header */}
         <div className="flex items-center justify-between px-6 py-4.5 border-b border-[#EAE3DF] bg-[#FAF8F6]">
-          <Link href="/" onClick={onClose} className="flex items-center">
+          <Link href="/" onClick={handleClose} className="flex items-center">
             <Image
               src={siteConfig.logo}
               alt={siteConfig.logoAlt}
@@ -77,7 +117,7 @@ export default function MobileMenu({ isOpen, onClose, onOpenQuote }: MobileMenuP
             />
           </Link>
           <button
-            onClick={onClose}
+            onClick={handleClose}
             className="w-9 h-9 rounded-full border border-[#EAE3DF] bg-white text-[#25211F] hover:bg-[#F7EFEB] hover:text-[#78564C] flex items-center justify-center transition-all shadow-2xs active:scale-95"
             aria-label="Close navigation menu"
           >
@@ -122,7 +162,7 @@ export default function MobileMenu({ isOpen, onClose, onOpenQuote }: MobileMenuP
                           <Link
                             key={subItem.title}
                             href={subItem.href}
-                            onClick={onClose}
+                            onClick={handleClose}
                             className={`flex flex-col py-2.5 px-3 rounded-xl transition-all ${
                               isSubActive
                                 ? "bg-[#F7EFEB] text-[#78564C] font-medium"
@@ -148,7 +188,7 @@ export default function MobileMenu({ isOpen, onClose, onOpenQuote }: MobileMenuP
               <Link
                 key={item.title}
                 href={item.href}
-                onClick={onClose}
+                onClick={handleClose}
                 className={`flex items-center justify-between py-3 px-3.5 rounded-2xl text-[16px] font-medium transition-all ${
                   isActive
                     ? "bg-[#F7EFEB] text-[#78564C] font-semibold"
@@ -187,8 +227,10 @@ export default function MobileMenu({ isOpen, onClose, onOpenQuote }: MobileMenuP
         <div className="p-5 border-t border-[#EAE3DF] bg-white space-y-2.5">
           <button
             onClick={() => {
-              onClose();
-              onOpenQuote();
+              handleClose();
+              setTimeout(() => {
+                onOpenQuote();
+              }, 320);
             }}
             className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-[#C99583] hover:bg-[#B37D6B] text-white font-medium text-sm transition-all shadow-md active:scale-[0.98]"
           >
