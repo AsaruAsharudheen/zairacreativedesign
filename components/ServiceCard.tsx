@@ -12,7 +12,7 @@ interface ServiceCardProps {
 export default function ServiceCard({ service, featured = false }: ServiceCardProps) {
   if (featured) {
     return (
-      <div className="relative col-span-1 lg:col-span-12 rounded-3xl overflow-hidden bg-white border border-[#EAE3DF] shadow-md hover:shadow-xl transition-all duration-300 group">
+      <div className="relative col-span-1 md:col-span-2 lg:col-span-4 rounded-3xl overflow-hidden bg-white border border-[#EAE3DF] shadow-md hover:shadow-xl transition-all duration-300 group">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
           {/* Featured Image */}
           <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-[460px] overflow-hidden">
@@ -73,9 +73,9 @@ export default function ServiceCard({ service, featured = false }: ServiceCardPr
   }
 
   return (
-    <div className="group flex flex-col h-full rounded-2xl overflow-hidden bg-white border border-[#EAE3DF] shadow-xs hover:shadow-lg transition-all duration-300">
+    <div className="group flex flex-col h-full rounded-2xl overflow-hidden bg-white border border-[#EAE3DF] shadow-xs hover:shadow-xl hover:border-[#C99583]/50 transition-all duration-300">
       {/* Image */}
-      <div className="relative h-60 sm:h-64 overflow-hidden">
+      <div className="relative h-60 sm:h-64 overflow-hidden bg-[#F7EFEB]">
         <Image
           src={service.image}
           alt={service.alt}
@@ -87,20 +87,22 @@ export default function ServiceCard({ service, featured = false }: ServiceCardPr
       </div>
 
       {/* Card Content */}
-      <div className="p-6 flex flex-col flex-1 justify-between space-y-4">
-        <div className="space-y-2">
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-[#78564C]">
-            {service.tagline}
-          </span>
-          <h3 className="text-xl font-medium text-[#25211F] group-hover:text-[#C99583] transition-colors">
+      <div className="p-6 flex flex-col flex-1 justify-between">
+        <div className="flex flex-col">
+          <div className="h-6 flex items-center mb-1">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#78564C] truncate">
+              {service.tagline}
+            </span>
+          </div>
+          <h3 className="text-xl font-medium text-[#25211F] group-hover:text-[#C99583] transition-colors h-7 flex items-center mb-2.5">
             {service.title}
           </h3>
-          <p className="text-sm text-[#77716D] leading-relaxed line-clamp-3">
+          <p className="text-sm text-[#77716D] leading-relaxed line-clamp-3 min-h-[4.25rem]">
             {service.shortDescription}
           </p>
         </div>
 
-        <div className="pt-2 border-t border-[#EAE3DF]/80">
+        <div className="pt-4 mt-5 border-t border-[#EAE3DF]/80 flex items-center justify-between">
           <Link
             href={service.href}
             className="inline-flex items-center gap-2 text-xs font-semibold text-[#78564C] group-hover:text-[#C99583] uppercase tracking-wider transition-colors"

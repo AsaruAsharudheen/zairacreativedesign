@@ -63,12 +63,12 @@ export const servicesData: ServiceItem[] = [
     id: "interior-design",
     slug: "interior-design",
     title: "Interior Design",
-    tagline: "Atmospheres of Serenity & Sophistication",
+    tagline: "Residential Interiors",
     shortDescription:
-      "Thoughtfully conceptualized residential interiors, luxury living rooms, and bedroom sanctuaries tailored to your personal aesthetic.",
+      "Thoughtfully conceptualized residential spaces, luxury living rooms, and private sanctuaries tailored to your personal aesthetic.",
     fullDescription:
       "We design spaces that elevate everyday living into an inspiring sanctuary. Our residential interior design approach balances organic warmth with contemporary minimalism. From mood boards and space planning to custom cabinetry, lighting concepts, and furniture styling, we transform empty rooms into cohesive environments that feel authentic and deeply welcoming.",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/services/interior-design.jpg",
     alt: "Warm minimalist living room interior with neutral tones and bespoke furnishings",
     bulletPoints: [
       "Residential interiors & whole-home concept planning",
@@ -106,13 +106,13 @@ export const servicesData: ServiceItem[] = [
     id: "fabrication",
     slug: "fabrication",
     title: "Fabrication",
-    tagline: "Architectural Precision Metalwork",
+    tagline: "Custom Metal Fabrication",
     shortDescription:
-      "Custom metal fabrication, bespoke partitions, ornamental screens, and durable structural design elements.",
+      "Custom architectural metal fabrication, bespoke laser-cut room dividers, ornamental steel screens, and decorative structural elements.",
     fullDescription:
       "Our architectural fabrication service bridges heavy-duty engineering strength with artistic finesse. We craft custom mild steel, stainless steel, brass, and aluminium structures including CNC laser-cut room dividers, glass-and-steel industrial partitions, entrance gates, exterior pergolas, and decorative furniture frames.",
-    image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80",
-    alt: "Architectural geometric metal partition and bespoke craft fabrication",
+    image: "/images/services/fabrication.jpg",
+    alt: "Bespoke laser-cut architectural metal partition screen and custom metal fabrication",
     bulletPoints: [
       "Custom architectural metal fabrication & joinery",
       "Laser-cut decorative screens and space partitions",
@@ -149,13 +149,13 @@ export const servicesData: ServiceItem[] = [
     id: "gypsum-work",
     slug: "gypsum-work",
     title: "Gypsum Work",
-    tagline: "Sculptural Ceilings & Concealed Illumination",
+    tagline: "Modern False Ceilings",
     shortDescription:
-      "Modern false ceilings, perimeter cove lighting recesses, drywall partitions, and clean contemporary gypsum detailing.",
+      "Modern gypsum false ceilings, perimeter LED cove lighting recesses, minimalist drywall partitions, and seamless architectural detailing.",
     fullDescription:
       "A thoughtfully executed ceiling defines the acoustic comfort and ambient aura of a home. We specialize in contemporary gypsum false ceilings, minimalist stepped drops, indirect LED cove light recesses, floating island ceilings, and acoustic wall linings. Using galvanized steel framing and premium plasterboard, we deliver crack-free, silky-smooth planes.",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
-    alt: "Contemporary gypsum false ceiling with warm indirect cove lighting and clean shadow lines",
+    image: "/images/services/gypsum-work.jpg",
+    alt: "Sculptural multi-level gypsum false ceiling with warm indirect LED cove lighting and magnetic tracks",
     bulletPoints: [
       "Modern architectural false ceilings & suspended islands",
       "Indirect LED cove light profiles and magnetic track slots",
@@ -192,13 +192,13 @@ export const servicesData: ServiceItem[] = [
     id: "staircase-design",
     slug: "staircase-design",
     title: "Staircase Design",
-    tagline: "Sculptural Ascents in Wood, Metal & Glass",
+    tagline: "Modern Staircase Concepts",
     shortDescription:
-      "Modern floating staircases, bespoke architectural railings, and tailored steps that make an impressive spatial statement.",
+      "Modern floating cantilevered staircases, bespoke metal and glass railings, and sculptural steps engineered for lasting beauty.",
     fullDescription:
       "The staircase is often the architectural focal spine of a home. Zaira Creative Design creates dramatic floating staircases, mono-stringer metal stairs, spiral structures, and contemporary railings combining wood, glass, and rose-gold or matte black metalwork. We engineer each tread for ergonomic comfort, safety, and breathtaking visual weightlessness.",
-    image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
-    alt: "Modern architectural wooden and metal staircase with minimalist railing",
+    image: "/images/services/staircase-design.jpg",
+    alt: "Contemporary floating wooden cantilevered staircase with glass balustrade and integrated step lighting",
     bulletPoints: [
       "Modern cantilevered & floating staircase concepts",
       "Custom laser-cut, wrought iron, and tempered glass railings",
