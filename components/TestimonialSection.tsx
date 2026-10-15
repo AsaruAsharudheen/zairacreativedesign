@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
 import { testimonialsData } from "@/data/testimonials";
-import { Star, Quote, CheckCircle } from "lucide-react";
+import { Quote, CheckCircle } from "lucide-react";
 
 export default function TestimonialSection() {
   const hasReviews = testimonialsData && testimonialsData.length > 0;
@@ -32,15 +32,6 @@ export default function TestimonialSection() {
                       {item.serviceCategory}
                     </span>
                   </div>
-
-                  {/* Rating Stars */}
-                  {item.rating && (
-                    <div className="flex items-center gap-1 mb-4 text-[#C99583]">
-                      {Array.from({ length: item.rating }).map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current text-[#C99583]" />
-                      ))}
-                    </div>
-                  )}
 
                   <p className="text-sm sm:text-base text-[#25211F] leading-relaxed mb-6">
                     &ldquo;{item.feedback}&rdquo;

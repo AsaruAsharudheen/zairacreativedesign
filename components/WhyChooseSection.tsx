@@ -1,13 +1,13 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
 import { whyChooseBenefits } from "@/data/whyChooseUs";
-import { Sparkles, Layers, CheckCircle2, Compass, Wrench } from "lucide-react";
+import { ShieldCheck, Layers, CheckCircle2, Compass, Wrench } from "lucide-react";
 
 export default function WhyChooseSection() {
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case "Sparkles":
-        return <Sparkles className="w-6 h-6 text-[#C99583]" />;
+      case "ShieldCheck":
+        return <ShieldCheck className="w-6 h-6 text-[#C99583]" />;
       case "Layers":
         return <Layers className="w-6 h-6 text-[#C99583]" />;
       case "CheckCircle2":
@@ -17,7 +17,7 @@ export default function WhyChooseSection() {
       case "Wrench":
         return <Wrench className="w-6 h-6 text-[#C99583]" />;
       default:
-        return <Sparkles className="w-6 h-6 text-[#C99583]" />;
+        return <ShieldCheck className="w-6 h-6 text-[#C99583]" />;
     }
   };
 
@@ -54,8 +54,7 @@ export default function WhyChooseSection() {
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[#EAE3DF]/60 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C99583]" />
+              <div className="mt-6 pt-4 border-t border-[#EAE3DF]/60 flex items-center">
                 <span className="text-xs font-medium text-[#78564C] tracking-wider uppercase">
                   Zaira Quality Standard
                 </span>

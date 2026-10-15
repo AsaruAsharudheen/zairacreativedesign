@@ -20,8 +20,7 @@ export default function ContactPage() {
 
         {/* Page Title */}
         <div className="py-8 sm:py-12 max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C99583]" />
+          <div className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
             <span>Consultation & Inquiries</span>
           </div>
 

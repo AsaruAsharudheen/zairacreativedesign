@@ -63,8 +63,7 @@ export default function BrandIntro() {
 
           {/* Right Column: Narrative & Values */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-medium tracking-wider uppercase bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C99583]" />
+            <div className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium tracking-wider uppercase bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
               <span>About Zaira Creative Design</span>
             </div>
 

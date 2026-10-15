@@ -11,7 +11,6 @@ import {
   Bookmark,
   MessageCircle,
   ArrowUpRight,
-  Sparkles,
 } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 import { getWhatsAppUrl, getTelUrl, getMailtoUrl } from "@/lib/contact";

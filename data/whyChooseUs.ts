@@ -2,7 +2,7 @@ export interface BenefitItem {
   id: string;
   title: string;
   description: string;
-  iconName: "Sparkles" | "Layers" | "CheckCircle2" | "Compass" | "Wrench";
+  iconName: "ShieldCheck" | "Layers" | "CheckCircle2" | "Compass" | "Wrench";
 }
 
 export const whyChooseBenefits: BenefitItem[] = [
@@ -11,7 +11,7 @@ export const whyChooseBenefits: BenefitItem[] = [
     title: "Carefully Selected Materials",
     description:
       "We source fabrics, blind mechanisms, and hardware chosen for tactile quality, longevity, and timeless aesthetic appeal.",
-    iconName: "Sparkles",
+    iconName: "ShieldCheck",
   },
   {
     id: "stylish-practical",

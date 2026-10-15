@@ -26,8 +26,7 @@ export default function SectionHeading({
   return (
     <div className={`flex flex-col max-w-3xl ${alignmentClasses[align]} ${className}`}>
       {badge && (
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-medium tracking-wider uppercase mb-3.5 border transition-colors bg-[#F7EFEB]/80 text-[#78564C] border-[#EAE3DF]">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#C99583]" />
+        <div className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium tracking-wider uppercase mb-3.5 border transition-colors bg-[#F7EFEB]/80 text-[#78564C] border-[#EAE3DF]">
           <span>{badge}</span>
         </div>
       )}

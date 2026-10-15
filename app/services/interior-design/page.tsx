@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Check, Sparkles, MessageSquare, ArrowRight, Palette, Layout, Lightbulb, Box } from "lucide-react";
+import { Check, MessageSquare, ArrowRight, Palette, Layout, Lightbulb, Box } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -33,8 +33,7 @@ export default function InteriorDesignPage() {
         <div className="py-12 sm:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C99583]" />
+              <div className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
                 <span>{service.tagline}</span>
               </div>
 
@@ -50,9 +49,8 @@ export default function InteriorDesignPage() {
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
                   href="/contact?service=Interior+Design"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#C99583] hover:bg-[#B37D6B] text-white font-medium text-sm transition-all shadow-md hover:scale-[1.02]"
+                  className="inline-flex items-center px-7 py-3.5 rounded-full bg-[#C99583] hover:bg-[#B37D6B] text-white font-medium text-sm transition-all shadow-md hover:scale-[1.02]"
                 >
-                  <Sparkles className="w-4 h-4" />
                   <span>Book Design Consultation</span>
                 </Link>
                 <a
@@ -102,7 +100,7 @@ export default function InteriorDesignPage() {
               >
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-[#F7EFEB] text-[#C99583] flex items-center justify-center mb-4">
-                    <Sparkles className="w-5 h-5" />
+                    <Layout className="w-5 h-5" />
                   </div>
                   <h3 className="text-lg font-medium text-[#25211F] mb-2">
                     {feat.title}

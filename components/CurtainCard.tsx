@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageSquare, ArrowRight, Sparkles } from "lucide-react";
+import { MessageSquare, ArrowRight } from "lucide-react";
 import { CurtainCategory } from "@/data/curtains";
 import { getServiceWhatsAppUrl } from "@/lib/contact";
 import { useQuoteModal } from "./QuoteModalContext";
@@ -35,8 +35,7 @@ export default function CurtainCard({ curtain, priority = false }: CurtainCardPr
 
         {/* Floating Light Control Badge */}
         <div className="absolute top-3 left-3">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium tracking-wide bg-white/95 text-[#78564C] shadow-2xs backdrop-blur-xs border border-[#EAE3DF]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C99583]" />
+          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-medium tracking-wide bg-white/95 text-[#78564C] shadow-2xs backdrop-blur-xs border border-[#EAE3DF]">
             <span>{curtain.lightControl}</span>
           </span>
         </div>
@@ -55,9 +54,8 @@ export default function CurtainCard({ curtain, priority = false }: CurtainCardPr
           </a>
           <button
             onClick={() => openQuoteModal(curtain.name)}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white text-[#25211F] text-xs font-medium shadow-md hover:bg-[#FAF8F6] transition-transform hover:scale-105"
+            className="inline-flex items-center px-3.5 py-2 rounded-full bg-white text-[#25211F] text-xs font-medium shadow-md hover:bg-[#FAF8F6] transition-transform hover:scale-105"
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#C99583]" />
             <span>Get Quote</span>
           </button>
         </div>

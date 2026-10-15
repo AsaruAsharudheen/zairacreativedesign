@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Sparkles, CheckCircle2, Scissors, ShieldCheck, HeartHandshake, ArrowRight } from "lucide-react";
+import { Layers, CheckCircle2, Scissors, ShieldCheck, HeartHandshake, ArrowRight } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -78,8 +78,7 @@ export default function AboutPage() {
 
         {/* Hero Section */}
         <div className="py-12 sm:py-16 max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-5 bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C99583]" />
+          <div className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-5 bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
             <span>Our Story & Values</span>
           </div>
 
@@ -131,7 +130,7 @@ export default function AboutPage() {
                   <span className="text-sm font-medium text-[#25211F]">Personal Design Guidance</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <Sparkles className="w-4 h-4 text-[#C99583] shrink-0" />
+                  <Layers className="w-4 h-4 text-[#C99583] shrink-0" />
                   <span className="text-sm font-medium text-[#25211F]">Curated Fabric Library</span>
                 </div>
               </div>

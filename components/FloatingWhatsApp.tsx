@@ -15,8 +15,7 @@ export default function FloatingWhatsApp() {
       {isOpen && (
         <div className="mb-3 w-72 rounded-2xl bg-white p-4 shadow-2xl border border-[#EAE3DF] animate-fade-in">
           <div className="flex items-center justify-between pb-2 border-b border-[#EAE3DF]">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse" />
+            <div className="flex items-center">
               <span className="text-xs font-semibold text-[#25211F]">
                 Zaira Design Studio
               </span>

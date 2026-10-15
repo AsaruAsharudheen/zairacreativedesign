@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Sparkles, ChevronDown, ShieldCheck, Scissors, Award } from "lucide-react";
+import { ArrowRight, ChevronDown, ShieldCheck, Scissors, Award } from "lucide-react";
 import { useQuoteModal } from "./QuoteModalContext";
 
 export default function Hero() {
@@ -37,8 +37,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 md:py-16">
         <div className="max-w-2xl lg:max-w-3xl">
           {/* Subtle Brand Accent Tag */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase mb-5 bg-[#F7EFEB]/90 text-[#78564C] border border-[#EAE3DF] shadow-2xs backdrop-blur-sm animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-[#C99583] animate-pulse" />
+          <div className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase mb-5 bg-[#F7EFEB]/90 text-[#78564C] border border-[#EAE3DF] shadow-2xs backdrop-blur-sm animate-fade-in">
             <span>Zaira Creative Design • Curtains & Luxury Interiors</span>
           </div>
 
@@ -68,9 +67,8 @@ export default function Hero() {
 
             <button
               onClick={() => openQuoteModal("Home Hero Consultation")}
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-white/90 hover:bg-white text-[#25211F] border border-[#EAE3DF] hover:border-[#C99583] font-medium text-base transition-all duration-200 shadow-2xs hover:scale-[1.02] active:scale-[0.98] backdrop-blur-sm"
+              className="inline-flex items-center justify-center px-7 py-4 rounded-full bg-white/90 hover:bg-white text-[#25211F] border border-[#EAE3DF] hover:border-[#C99583] font-medium text-base transition-all duration-200 shadow-2xs hover:scale-[1.02] active:scale-[0.98] backdrop-blur-sm"
             >
-              <Sparkles className="w-4 h-4 text-[#C99583]" />
               <span>Get a Free Quote</span>
             </button>
           </div>

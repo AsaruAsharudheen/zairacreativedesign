@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { X, ChevronDown, ChevronRight, MessageSquare, Phone, Sparkles } from "lucide-react";
+import { X, ChevronDown, ChevronRight, MessageSquare, Phone } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 import { getWhatsAppUrl, getTelUrl } from "@/lib/contact";
 
@@ -149,9 +149,8 @@ export default function MobileMenu({ isOpen, onClose, onOpenQuote }: MobileMenuP
               onClose();
               onOpenQuote();
             }}
-            className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-[#C99583] hover:bg-[#B37D6B] text-white font-medium text-sm transition-colors shadow-sm"
+            className="w-full flex items-center justify-center py-3.5 px-4 rounded-xl bg-[#C99583] hover:bg-[#B37D6B] text-white font-medium text-sm transition-colors shadow-sm"
           >
-            <Sparkles className="w-4 h-4" />
             <span>Get a Free Quote</span>
           </button>
 

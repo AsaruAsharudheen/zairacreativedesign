@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   MessageSquare,
-  Sparkles,
   ChevronDown,
   Sun,
   Moon,
@@ -110,8 +109,7 @@ export default function CurtainsPage() {
         <div className="py-12 sm:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C99583]" />
+              <div className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
                 <span>Our Signature Focus</span>
               </div>
 
@@ -129,9 +127,8 @@ export default function CurtainsPage() {
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <button
                   onClick={() => openQuoteModal("Curtains & Blinds General Consultation")}
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#C99583] hover:bg-[#B37D6B] text-white font-medium text-sm transition-all shadow-md hover:scale-[1.02]"
+                  className="inline-flex items-center px-7 py-3.5 rounded-full bg-[#C99583] hover:bg-[#B37D6B] text-white font-medium text-sm transition-all shadow-md hover:scale-[1.02]"
                 >
-                  <Sparkles className="w-4 h-4" />
                   <span>Request Free Measurement</span>
                 </button>
                 <a
@@ -341,9 +338,8 @@ export default function CurtainsPage() {
                       </a>
                       <button
                         onClick={() => openQuoteModal(category.name)}
-                        className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-[#C99583] hover:bg-[#B37D6B] text-white text-xs sm:text-sm font-medium transition-transform hover:scale-[1.02]"
+                        className="inline-flex items-center px-5 py-2.5 rounded-full bg-[#C99583] hover:bg-[#B37D6B] text-white text-xs sm:text-sm font-medium transition-transform hover:scale-[1.02]"
                       >
-                        <Sparkles className="w-3.5 h-3.5" />
                         <span>Request Measurement</span>
                       </button>
                     </div>

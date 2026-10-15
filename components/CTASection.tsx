@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Sparkles, MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import { useQuoteModal } from "./QuoteModalContext";
 import { getWhatsAppUrl } from "@/lib/contact";
 
@@ -29,8 +29,7 @@ export default function CTASection() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Rose Gold Accent Tag */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6 bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
-          <span className="w-2 h-2 rounded-full bg-[#C99583]" />
+        <div className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6 bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
           <span>Begin Your Interior Journey</span>
         </div>
 
@@ -48,9 +47,8 @@ export default function CTASection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => openQuoteModal("Call To Action Section")}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#C99583] hover:bg-[#B37D6B] text-white font-medium text-base transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#C99583] hover:bg-[#B37D6B] text-white font-medium text-base transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
           >
-            <Sparkles className="w-4 h-4" />
             <span>Request a Free Quote</span>
           </button>
 

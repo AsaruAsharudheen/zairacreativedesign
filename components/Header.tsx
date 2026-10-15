@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, ChevronDown, Sparkles, MessageCircle } from "lucide-react";
+import { Menu, ChevronDown, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 import { useQuoteModal } from "./QuoteModalContext";
 import MobileMenu from "./MobileMenu";
@@ -153,9 +153,8 @@ export default function Header() {
 
               <button
                 onClick={() => openQuoteModal()}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#C99583] hover:bg-[#B37D6B] text-white font-medium text-sm transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
+                className="inline-flex items-center px-5 py-2.5 rounded-full bg-[#C99583] hover:bg-[#B37D6B] text-white font-medium text-sm transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
               >
-                <Sparkles className="w-3.5 h-3.5" />
                 <span>Get a Free Quote</span>
               </button>
             </div>

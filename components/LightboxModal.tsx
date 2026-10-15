@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { X, ChevronLeft, ChevronRight, MessageSquare, Sparkles } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, MessageSquare } from "lucide-react";
 import { GalleryItem } from "@/data/gallery";
 import { getServiceWhatsAppUrl } from "@/lib/contact";
 import { useQuoteModal } from "./QuoteModalContext";
@@ -140,9 +140,8 @@ export default function LightboxModal({
                 onClose();
                 openQuoteModal(item.title);
               }}
-              className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl border border-[#EAE3DF] bg-[#FAF8F6] hover:bg-white text-[#25211F] text-xs sm:text-sm font-medium transition-colors"
+              className="inline-flex items-center justify-center px-4 py-2.5 rounded-xl border border-[#EAE3DF] bg-[#FAF8F6] hover:bg-white text-[#25211F] text-xs sm:text-sm font-medium transition-colors"
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#C99583]" />
               <span>Quote</span>
             </button>
           </div>

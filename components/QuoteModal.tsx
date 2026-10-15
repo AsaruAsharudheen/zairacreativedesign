@@ -110,8 +110,7 @@ export default function QuoteModal() {
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-[#EAE3DF] bg-[#FAF8F6]">
           <div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#C99583]" />
+            <div className="flex items-center">
               <span className="text-xs font-semibold tracking-wider text-[#78564C] uppercase">
                 Bespoke Consultation
               </span>
