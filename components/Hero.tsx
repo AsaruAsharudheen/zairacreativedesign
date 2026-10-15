@@ -37,9 +37,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 md:py-16">
         <div className="max-w-2xl lg:max-w-3xl">
           {/* Subtle Brand Accent Tag */}
-          <div className="inline-flex items-center px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-medium tracking-wider uppercase mb-4 sm:mb-5 bg-[#F7EFEB]/90 text-[#78564C] border border-[#EAE3DF] shadow-2xs backdrop-blur-sm animate-fade-in max-w-full">
-            <span className="truncate">Curtains, Blinds &amp; Luxury Interiors</span>
-          </div>
+        
 
           {/* Suggested Headline */}
           <h1
