@@ -29,10 +29,28 @@ export default function MobileMenu({ isOpen, onClose, onOpenQuote }: MobileMenuP
     };
   }, [isOpen]);
 
-  // Close on route change
+  const prevPathname = React.useRef(pathname);
+
+  // Close only when route actually changes
   useEffect(() => {
-    onClose();
+    if (prevPathname.current !== pathname) {
+      prevPathname.current = pathname;
+      onClose();
+    }
   }, [pathname, onClose]);
+
+  // Handle escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 

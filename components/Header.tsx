@@ -17,6 +17,10 @@ export default function Header() {
   const pathname = usePathname();
   const { openQuoteModal } = useQuoteModal();
 
+  const closeMobileMenu = React.useCallback(() => {
+    setMobileMenuOpen(false);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -159,21 +163,12 @@ export default function Header() {
               </button>
             </div>
 
-            {/* Mobile Actions: WhatsApp Icon + Hamburger */}
-            <div className="flex items-center gap-2 lg:hidden">
-              <a
-                href={getWhatsAppUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-[#25D366] text-white hover:bg-[#20ba59] transition-colors"
-                aria-label="Chat on WhatsApp"
-              >
-                <MessageCircle className="w-4 h-4" />
-              </a>
-
+            {/* Mobile Actions: Hamburger Only (WhatsApp icon removed per user request) */}
+            <div className="flex items-center lg:hidden">
               <button
+                type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-2 rounded-xl text-[#25211F] hover:bg-black/5 transition-colors"
+                className="p-2.5 rounded-xl text-[#25211F] hover:bg-black/5 active:bg-black/10 transition-colors"
                 aria-label="Open main menu"
               >
                 <Menu className="w-6 h-6" />
@@ -186,7 +181,7 @@ export default function Header() {
       {/* Slide-in Mobile Menu */}
       <MobileMenu
         isOpen={mobileMenuOpen}
-        onClose={() => setMobileMenuOpen(false)}
+        onClose={closeMobileMenu}
         onOpenQuote={openQuoteModal}
       />
     </>
