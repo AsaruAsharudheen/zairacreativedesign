@@ -108,20 +108,20 @@ export default function QuoteModal() {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-[#EAE3DF] bg-[#FAF8F6]">
+        <div className="flex items-center justify-between px-5 sm:px-6 py-4 border-b border-[#EAE3DF] bg-[#FAF8F6]">
           <div>
             <div className="flex items-center">
               <span className="text-xs font-semibold tracking-wider text-[#78564C] uppercase">
                 Bespoke Consultation
               </span>
             </div>
-            <h3 id="quote-modal-title" className="text-xl font-medium text-[#25211F] mt-0.5">
+            <h3 id="quote-modal-title" className="text-lg sm:text-xl font-medium text-[#25211F] mt-0.5">
               Request a Free Quote
             </h3>
           </div>
           <button
             onClick={closeQuoteModal}
-            className="p-2 text-[#77716D] hover:text-[#25211F] rounded-full hover:bg-black/5 transition-colors"
+            className="w-9 h-9 text-[#77716D] hover:text-[#25211F] rounded-full hover:bg-black/5 flex items-center justify-center transition-colors"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -129,7 +129,7 @@ export default function QuoteModal() {
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 overflow-y-auto">
+        <div className="p-5 sm:p-6 overflow-y-auto">
           {submitSuccess ? (
             <div className="py-8 text-center space-y-4">
               <div className="w-16 h-16 mx-auto rounded-full bg-[#F7EFEB] text-[#C99583] flex items-center justify-center">
