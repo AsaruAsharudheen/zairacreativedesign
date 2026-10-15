@@ -25,14 +25,14 @@ export default function BrandIntro() {
   return (
     <section id="brand-intro" className="py-20 lg:py-28 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Image with Subtle Accent Frame */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+          {/* Left Column: Image perfectly matching right content height */}
+          <div className="lg:col-span-6 relative flex flex-col">
+            <div className="relative w-full h-full min-h-[420px] sm:min-h-[500px] lg:min-h-0 flex-1">
               {/* Decorative Rose-Gold Accent Underlay */}
               <div className="absolute -inset-3 sm:-inset-4 rounded-3xl bg-[#F7EFEB] -rotate-1 -z-10" />
 
-              <div className="relative h-[380px] sm:h-[480px] lg:h-[540px] w-full rounded-2xl overflow-hidden shadow-xl border border-[#EAE3DF]">
+              <div className="relative w-full h-full min-h-[420px] sm:min-h-[500px] lg:min-h-full rounded-2xl overflow-hidden shadow-xl border border-[#EAE3DF]">
                 <Image
                   src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80"
                   alt="Harmonious residential interior with soft linen drapes and bespoke furniture"
@@ -43,7 +43,7 @@ export default function BrandIntro() {
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute -bottom-6 -right-4 sm:-bottom-6 sm:right-6 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border border-[#EAE3DF] max-w-[240px]">
+              <div className="absolute bottom-6 right-6 z-10 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border border-[#EAE3DF] max-w-[240px]">
                 <div className="flex items-center gap-3">
                   <span className="w-10 h-10 rounded-full bg-[#F7EFEB] text-[#C99583] flex items-center justify-center font-semibold text-lg">
                     Z
@@ -62,8 +62,8 @@ export default function BrandIntro() {
           </div>
 
           {/* Right Column: Narrative & Values */}
-          <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium tracking-wider uppercase bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF]">
+          <div className="lg:col-span-6 flex flex-col justify-between space-y-6 py-1">
+            <div className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium tracking-wider uppercase bg-[#F7EFEB] text-[#78564C] border border-[#EAE3DF] self-start">
               <span>About Zaira Creative Design</span>
             </div>
 
