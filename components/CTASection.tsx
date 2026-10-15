@@ -36,7 +36,7 @@ export default function CTASection() {
 
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#25211F] tracking-tight leading-[1.2] mb-6 max-w-3xl mx-auto">
           Let&apos;s Make Your Space{" "}
-          <span className="text-[#C99583] font-medium italic">Beautiful</span>
+          <span className="text-[#C99583] font-medium">Beautiful</span>
         </h2>
 
         <p className="text-base sm:text-lg text-[#77716D] leading-relaxed max-w-2xl mx-auto mb-10">

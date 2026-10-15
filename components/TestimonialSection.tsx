@@ -42,7 +42,7 @@ export default function TestimonialSection() {
                     </div>
                   )}
 
-                  <p className="text-sm sm:text-base text-[#25211F] leading-relaxed italic mb-6">
+                  <p className="text-sm sm:text-base text-[#25211F] leading-relaxed mb-6">
                     &ldquo;{item.feedback}&rdquo;
                   </p>
                 </div>

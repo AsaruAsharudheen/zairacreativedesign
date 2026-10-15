@@ -117,7 +117,7 @@ export default function CurtainsPage() {
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-[#25211F] tracking-tight leading-[1.12]">
                 Bespoke Curtains &{" "}
-                <span className="text-[#C99583] font-medium italic">Modern Window Blinds</span>
+                <span className="text-[#C99583] font-medium">Modern Window Blinds</span>
               </h1>
 
               <p className="text-base sm:text-lg text-[#77716D] leading-relaxed max-w-2xl">

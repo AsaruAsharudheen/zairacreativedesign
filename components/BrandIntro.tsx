@@ -70,7 +70,7 @@ export default function BrandIntro() {
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#25211F] tracking-tight leading-[1.2]">
               Designing Spaces That{" "}
-              <span className="text-[#C99583] font-medium italic">Feel Like Home</span>
+              <span className="text-[#C99583] font-medium">Feel Like Home</span>
             </h2>
 
             <p className="text-base sm:text-lg text-[#77716D] leading-relaxed">

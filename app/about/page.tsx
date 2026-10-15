@@ -85,7 +85,7 @@ export default function AboutPage() {
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-[#25211F] tracking-tight leading-[1.15] mb-6">
             Thoughtful Design.{" "}
-            <span className="text-[#C99583] font-medium italic">Beautiful Living.</span>
+            <span className="text-[#C99583] font-medium">Beautiful Living.</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-[#77716D] leading-relaxed max-w-3xl">

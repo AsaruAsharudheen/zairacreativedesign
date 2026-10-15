@@ -40,7 +40,7 @@ export default function GypsumWorkPage() {
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-[#25211F] tracking-tight leading-[1.15]">
                 Modern Gypsum Ceilings &{" "}
-                <span className="text-[#C99583] font-medium italic">Concealed Illumination</span>
+                <span className="text-[#C99583] font-medium">Concealed Illumination</span>
               </h1>
 
               <p className="text-base sm:text-lg text-[#77716D] leading-relaxed max-w-2xl">

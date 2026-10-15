@@ -40,7 +40,7 @@ export default function StaircaseDesignPage() {
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-[#25211F] tracking-tight leading-[1.15]">
                 Modern Staircase Design &{" "}
-                <span className="text-[#C99583] font-medium italic">Architectural Railings</span>
+                <span className="text-[#C99583] font-medium">Architectural Railings</span>
               </h1>
 
               <p className="text-base sm:text-lg text-[#77716D] leading-relaxed max-w-2xl">

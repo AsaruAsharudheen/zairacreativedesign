@@ -27,7 +27,7 @@ export default function ContactPage() {
 
           <h1 className="text-4xl sm:text-5xl font-normal text-[#25211F] tracking-tight leading-[1.15] mb-4">
             Let&apos;s Talk About{" "}
-            <span className="text-[#C99583] font-medium italic">Your Space</span>
+            <span className="text-[#C99583] font-medium">Your Space</span>
           </h1>
 
           <p className="text-base sm:text-lg text-[#77716D] leading-relaxed">
