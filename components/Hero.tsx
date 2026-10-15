@@ -43,9 +43,11 @@ export default function Hero() {
           </div>
 
           {/* Suggested Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal text-[#25211F] leading-[1.12] tracking-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal not-italic text-[#25211F] leading-[1.12] tracking-tight mb-6" style={{ fontStyle: "normal" }}>
             Transform Your Space with{" "}
-            <span className="text-[#C99583] font-medium">Timeless Elegance</span>
+            <span className="text-[#C99583] font-medium not-italic" style={{ fontStyle: "normal" }}>
+              Timeless Elegance
+            </span>
           </h1>
 
           {/* Supporting Text */}
