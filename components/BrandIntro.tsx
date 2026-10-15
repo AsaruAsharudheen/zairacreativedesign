@@ -1,29 +1,32 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function BrandIntro() {
   const valuePoints = [
     {
-      title: "Quality Craftsmanship",
+      title: 'Quality Craftsmanship',
       description:
-        "Every hem, seam, track, and joint is completed to exacting standards using premium materials and hardware.",
+        'Every hem, seam, track, and joint is completed to exacting standards using premium materials and hardware.',
     },
     {
-      title: "Thoughtful Design",
+      title: 'Thoughtful Design',
       description:
-        "We balance visual refinement with real-world practicality, light filtration, and effortless usability.",
+        'We balance visual refinement with real-world practicality, light filtration, and effortless usability.',
     },
     {
-      title: "Personalized Service",
+      title: 'Personalized Service',
       description:
-        "From fabric selection in your space to final millimeter-accurate installation, we guide you every step.",
+        'From fabric selection in your space to final millimeter-accurate installation, we guide you every step.',
     },
   ];
 
   return (
-    <section id="brand-intro" className="py-20 lg:py-28 bg-white overflow-hidden">
+    <section
+      id="brand-intro"
+      className="py-20 lg:py-28 bg-white overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
           {/* Left Column: Image perfectly matching right content height */}
@@ -68,26 +71,24 @@ export default function BrandIntro() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#25211F] tracking-tight leading-[1.2]">
-              Designing Spaces That{" "}
+              Designing Spaces That{' '}
               <span className="text-[#C99583] font-medium">Feel Like Home</span>
             </h2>
 
             <p className="text-base sm:text-lg text-[#77716D] leading-relaxed">
-              At Zaira Creative Design, we understand that a home is more than physical walls—it is
-              a personal sanctuary of warmth and tranquility. Specializing in bespoke curtains and
-              contemporary window blinds, we combine tactile fabrics, architectural drapery, and
-              curated interior solutions to transform everyday rooms into spaces of enduring beauty.
+              At Zaira Creative Design, we specialize in elegant curtains,
+              modern blinds, and timeless interior solutions that bring comfort,
+              beauty, and sophistication to every space.
             </p>
 
             <p className="text-sm sm:text-base text-[#77716D] leading-relaxed">
-              Beyond our core window treatment mastery, our multidisciplinary craft extends to
-              residential interior design, structural and decorative metal fabrication, gypsum false
-              ceilings with warm concealed cove illumination, and contemporary staircase design.
+              Our expertise also includes interior design, metal fabrication,
+              gypsum ceilings, and contemporary staircase solutions.
             </p>
 
             {/* Three Value Points */}
             <div className="space-y-4 pt-2">
-              {valuePoints.map((point) => (
+              {valuePoints.map(point => (
                 <div key={point.title} className="flex items-start gap-3.5">
                   <div className="p-1 rounded-full bg-[#F7EFEB] text-[#C99583] mt-0.5 shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-[#C99583]" />

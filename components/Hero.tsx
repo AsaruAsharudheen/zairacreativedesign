@@ -1,18 +1,24 @@
-"use client";
+'use client';
 
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, ChevronDown, ShieldCheck, Scissors, Award } from "lucide-react";
-import { useQuoteModal } from "./QuoteModalContext";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import {
+  ArrowRight,
+  ChevronDown,
+  ShieldCheck,
+  Scissors,
+  Award,
+} from 'lucide-react';
+import { useQuoteModal } from './QuoteModalContext';
 
 export default function Hero() {
   const { openQuoteModal } = useQuoteModal();
 
   const handleScrollToNext = () => {
-    const nextSection = document.getElementById("brand-intro");
+    const nextSection = document.getElementById('brand-intro');
     if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
+      nextSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -37,17 +43,19 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 md:py-16">
         <div className="max-w-2xl lg:max-w-3xl">
           {/* Subtle Brand Accent Tag */}
-        
 
           {/* Suggested Headline */}
           <h1
             className="text-[32px] xs:text-[38px] sm:text-5xl lg:text-6xl xl:text-7xl font-normal not-italic text-[#25211F] leading-[1.16] sm:leading-[1.12] tracking-tight mb-5 sm:mb-6"
-            style={{ fontStyle: "normal" }}
+            style={{ fontStyle: 'normal' }}
           >
-            Transform Your Space{" "}
+            Transform Your Space{' '}
             <span className="block sm:inline">
-              with{" "}
-              <span className="text-[#C99583] font-medium not-italic" style={{ fontStyle: "normal" }}>
+              with{' '}
+              <span
+                className="text-[#C99583] font-medium not-italic"
+                style={{ fontStyle: 'normal' }}
+              >
                 Timeless Elegance
               </span>
             </span>
@@ -55,8 +63,9 @@ export default function Hero() {
 
           {/* Supporting Text */}
           <p className="text-[15px] sm:text-lg lg:text-xl text-[#77716D] leading-relaxed max-w-xl mb-7 sm:mb-10 font-normal">
-            Discover beautifully crafted curtains, blinds, and interior solutions designed to bring
-            comfort, sophistication, and character to every space.
+            Discover beautifully crafted curtains, blinds, and interior
+            solutions designed to bring comfort, sophistication, and character
+            to every space.
           </p>
 
           {/* Primary & Secondary Call to Actions */}
@@ -70,7 +79,7 @@ export default function Hero() {
             </Link>
 
             <button
-              onClick={() => openQuoteModal("Home Hero Consultation")}
+              onClick={() => openQuoteModal('Home Hero Consultation')}
               className="inline-flex items-center justify-center px-7 py-3.5 sm:py-4 rounded-full bg-white/95 hover:bg-white text-[#25211F] border border-[#EAE3DF] hover:border-[#C99583] font-medium text-base transition-all duration-200 shadow-2xs hover:scale-[1.02] active:scale-[0.98] backdrop-blur-sm"
             >
               <span>Get a Free Quote</span>
@@ -107,7 +116,9 @@ export default function Hero() {
         className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-xs text-[#77716D] hover:text-[#C99583] transition-colors focus:outline-none z-10"
         aria-label="Scroll to learn more"
       >
-        <span className="tracking-widest uppercase text-[10px] font-medium">Scroll</span>
+        <span className="tracking-widest uppercase text-[10px] font-medium">
+          Scroll
+        </span>
         <ChevronDown className="w-4 h-4 animate-bounce text-[#C99583]" />
       </button>
     </section>
