@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import IntroLoader from "@/components/IntroLoader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -84,6 +85,7 @@ export default function RootLayout({
     <html lang="en" className={`${outfit.variable} scroll-smooth`}>
       <body className="min-h-screen flex flex-col bg-white text-[#25211F] antialiased selection:bg-[#F7EFEB] selection:text-[#78564C]">
         <QuoteModalProvider>
+          <IntroLoader />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
